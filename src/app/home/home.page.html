@@ -1,20 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      Aplicación Turística
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Esta es la aplicación telemática de
+        Eiman Suliber Males Hoyos
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Aplicación para conocer algunos de los
+      lugares turísticos más importantes de Colombia.
+    </ion-card-content>
+  </ion-card>
+
+  @for (lugar of lugares; track lugar.nombre) {
+  <ion-card>
+
+    <img [src]="lugar.imagen">
+
+    <ion-card-header>
+      <ion-card-title>
+        {{ lugar.nombre }}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ lugar.ubicacion }}
+    </ion-card-content>
+
+  </ion-card>
+  }
+
+  <ion-button expand="block" color="success" (click)="irLogin()">
+    Iniciar Sesión
+  </ion-button>
+
 </ion-content>

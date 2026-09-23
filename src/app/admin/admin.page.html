@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>
+      Panel Administrador
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button
+    expand="block"
+    color="success"
+    (click)="agregarLugar()">
+
+    Agregar Nuevo Lugar
+
+  </ion-button>
+
+  <ion-list>
+
+    <ion-item *ngFor="let lugar of lugares">
+
+   *  <ion-label>
+        {{ lugar }}
+*     </ion-label>
+
+      <ion-butt*n
+        color="danger"
+        s*ot="end"
+        (click)="eliminar*ugar(lugar)">
+
+        Eliminar
+
+ *    </ion-button>
+
+    </ion-item>*
+  </ion-list>
+
+  <ion-button
+    *xpand="block"
+    color="medium"
+ *  (click)="cerrarSesion()">
+
+    C*rrar Sesión
+
+  </ion-button>
+
+</io*-content>
