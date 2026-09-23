@@ -18,32 +18,31 @@
   </ion-button>
 
   <ion-list>
+    @for (lugar of lugares; track lugar.nombre; let indice = $index) {
+      <ion-item>
+        <ion-label>
+          <h2>{{ lugar.nombre }}</h2>
+          <p>{{ lugar.descripcion }}</p>
+          <p>{{ lugar.categoria }}</p>
+        </ion-label>
 
-    <ion-item *ngFor="let lugar of lugares">
-
-   *  <ion-label>
-        {{ lugar }}
-*     </ion-label>
-
-      <ion-butt*n
-        color="danger"
-        s*ot="end"
-        (click)="eliminar*ugar(lugar)">
-
-        Eliminar
-
- *    </ion-button>
-
-    </ion-item>*
+        <ion-button
+          color="danger"
+          slot="end"
+          (click)="eliminarLugar(indice)">
+          Eliminar
+        </ion-button>
+      </ion-item>
+    }
   </ion-list>
 
   <ion-button
-    *xpand="block"
+    expand="block"
     color="medium"
- *  (click)="cerrarSesion()">
+    (click)="cerrarSesion()">
 
-    C*rrar Sesión
+    Cerrar Sesión
 
   </ion-button>
 
-</io*-content>
+</ion-content>

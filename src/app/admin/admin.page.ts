@@ -8,10 +8,9 @@ import {
   IonTitle,
   IonContent,
   IonButton,
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent,
+  IonList,
+  IonItem,
+  IonLabel,
   AlertController
 } from '@ionic/angular';
 
@@ -26,10 +25,9 @@ import {
     IonTitle,
     IonContent,
     IonButton,
-    IonCard,
-    IonCardHeader,
-    IonCardTitle,
-    IonCardContent
+    IonList,
+    IonItem,
+    IonLabel
   ]
 })
 export class AdminPage {
